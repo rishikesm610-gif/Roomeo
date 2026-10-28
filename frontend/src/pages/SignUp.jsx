@@ -36,9 +36,13 @@ function SignUp() {
             toast.success("Signup Successfully")
             console.log(result)
         } catch (error) {
-          setLoading(false)
-            console.log(error)
-            toast.error("Somethings went wrong")
+           setLoading(false);
+
+    console.log("Error:", error.response?.data);
+    console.log("Status:", error.response?.status);
+
+    toast.error(
+        error.response?.data?.message || "Something went wrong")
         }
         
     }

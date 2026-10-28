@@ -25,6 +25,9 @@ export const sighUp=async (req,res) => {
     }
     
 }
+
+
+
 export const login = async (req,res) => {
     try {
         let {email,password} = req.body

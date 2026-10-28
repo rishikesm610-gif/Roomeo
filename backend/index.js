@@ -14,7 +14,7 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"https://buy-ans-selling-the-rooms.onrender.com",
+    origin:"http://localhost:5173",
     credentials:true
 }))
 
@@ -23,6 +23,7 @@ app.use("/api/user", userRouter )
 app.use("/api/listing",listingRouter )
 app.use("/api/booking",bookingRouter )
 
+ 
 
 app.listen(port,()=>{
     connectDb()
